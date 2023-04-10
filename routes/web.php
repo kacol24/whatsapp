@@ -32,7 +32,7 @@ Route::post('/', function (Request $request) {
                 'value' => $request->option_2,
             ],
         ],
-        'url'    => route('home', ['option_1' => $request->option_1, 'option_2' => $request->option_2]),
+        'url'    => route('home', ['option_1' => $request->option_1, 'option_2' => $request->option_2, 'qty' => $request->qty]),
     ])->render();
 
     return redirect()->away('https://wa.me/?text='.urlencode($whatsappMessage));
